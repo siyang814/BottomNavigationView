@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trees_of_block"
+    app:startDestination="@id/fragmentTrees">
+    <fragment
+        android:id="@+id/fragmentTrees"
+        android:name="com.example.fragmentcontainerview.TestFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/test_fragment" >
+        <action
+            android:id="@+id/action_fragmentTrees_to_fragmentTrees1"
+            app:destination="@id/fragmentTrees1"
+            app:popUpTo="@id/fragmentTrees"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTrees1"
+        android:name="com.example.fragmentcontainerview.TestTwoFragment"
+        android:label="test2"
+        tools:layout="@layout/test_fragment" >
+
+        <action
+            android:id="@+id/action_fragmentTrees1_to_fragmentTrees"
+            app:destination="@id/fragmentTrees"
+            app:popUpTo="@id/fragmentTrees1"
+            />
+    </fragment>
+</navigation>
+
